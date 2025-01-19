@@ -16,9 +16,23 @@
         <specmatic.version>2.2.1</specmatic.version>
         <spring.boot.version>3.3.0</spring.boot.version>
         <mockk.version>1.13.9</mockk.version>
+        <jackson.version>2.18.2</jackson.version>
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-kotlin</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
