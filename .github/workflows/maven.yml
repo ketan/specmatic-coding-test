@@ -24,6 +24,9 @@ jobs:
       with:
         distribution: 'oracle'
         java-version: ${{ matrix.java }}
-    - name: Build with Maven
+    - name: Test
       working-directory: main
-      run: mvn test
+      run: mvn -B clean test
+    - name: Check Backward Compatibility
+      working-directory: main
+      run: mvn -B exec:java
